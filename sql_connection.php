@@ -1,9 +1,11 @@
 <?php 
 
-define('DB_NAME', 'acorn_db'); 
-define('DB_USER', 'root'); 
-define('DB_PASSWORD', ''); 
-define('DB_HOST', 'localhost'); 
+define('DB_NAME', 'heroku_ebc3dd2864eaaf6'); 
+define('DB_USER', 'b9fc7786de1b59'); 
+define('DB_PASSWORD', '76a49078'); 
+define('DB_HOST', 'us-cdbr-east-02.cleardb.com'); 
+
+mysql://b9fc7786de1b59:76a49078@us-cdbr-east-02.cleardb.com/heroku_ebc3dd2864eaaf6?reconnect=true
 
 try {
 $con = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME); 

@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Raleway&family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@800&display=swap');
+
+@import'./include/variables.scss';
+@import'./include/global.scss';
+@import'./include/typography.scss';
+@import'./include/color.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: $color-primary;
+    color: white;
+    font-family: $font-baloo;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-wrapper {
+    background: url(./images/standing-acorn-stairlifts.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px -299px; 
+}
+
+.wrapper {
+    padding: 1.5em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    .logo {
+        font-weight: bold;
+    }
+    ul {
+        display: flex; 
+
+        li a {
+            padding: 0 .6em;
+        }
+    }
+}
+
+.banner-content {
+    margin: 4em 0 2em;
+
+    .subtitle {
+        margin-bottom: 0;
+    }
+}
+
+.purple-wrapper{
+    background: #351F3A
+}
+
+.register-wrapper {
+    padding-bottom: 5em;
+}
+
+.listings{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    justify-content: space-around;
+    margin-top: 2em;
+
+    li {
+        margin-bottom: 1.5em;
+    }
+
+    strong {
+        font-size: 1.5em;
+    }
+
+    span {
+        display: block;
+    }
+}
+
+.arrows {
+    display: none;
+}
+
+.extended-wrapper{
+    padding: 0 1.5em 2em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+ul.carousal {
+    margin-bottom: 1.5em;
+    li {
+        background: #422847;
+        padding: 1em;
+        margin-bottom: 1em;
+    }
+}
+
+blockquote {
+    margin: 0;
+    font-size: .7em;
+    line-height: 1.8em;
+    margin-bottom: 1em;
+}
+
+cite {
+    font-weight: bold;
+    color: #e379ff;
+    font-style: normal;
+    position: relative;
+    padding-left: 25px;
+}
+
+cite::before {
+    content: " ";
+    position: absolute;
+    left: 0; 
+    top: 10px;
+    height: 1px;
+    width: 20px;
+    border-bottom: 1px solid white;
+}
+
+h2 {
+    text-align: center;
+    position: relative;
+}
+
+h2::before {
+    content: " ";
+    position: absolute;
+    height: 5px;
+    width: 30px;
+    background: #b728dc;
+    top: -.3em;
+}
+
+.why-choose {
+    text-align: center;
+    opacity: .4;
+
+    li {
+        margin: 2em 0;
+    }
+
+    .reasons {
+        width: 175px;
+    }
+}
+
+
+
+@media (min-width: 500px) {
+    .why-choose {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+    }
+}
+
+@media (min-width: 650px) {
+    body {
+        font-size: 18px;
+    }
+
+    .wrapper {
+        padding: 1.5em 4em;
+    }
+
+    .carousal-container {
+        display: flex;
+    }
+
+    .arrows {
+        display: block;
+        width: 40px;
+        cursor: pointer;
+        margin: .5em;
+    }
+
+    .right {
+        transform: rotateZ(180deg);
+    }
+
+    ul.carousal {
+        display: flex;
+
+        li {
+            margin-right: 1em;
+            padding: 2em;
+            margin-bottom: 0;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .why-choose{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+@media (min-width: 854px) {
+    body {
+        font-size: 20px;
+    }
+
+    .listings {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+
+        span {
+            font-size: 15px;
+        }
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .subtitle {
+        font-size: 1.2em;
+    }
+
+    h2 {
+        text-align: left;
+        font-size: 2em;
+    }
+
+    .v-padding {
+        padding: 3em;
+    }
+
+    .purple-wrapper {
+        padding-bottom: 5em;
+    }
+
+    .move-up {
+        margin-top: -7em;
+    }
+}
+
+.quoteSpace {
+    font-size: 15px; 
+    padding-top: 2.7em;  
+    line-height: 1.7em;
+}
+
+.arrows {
+    filter: invert(60%) sepia(96%) saturate(7468%) hue-rotate(278deg) brightness(90%) contrast(102%);
+  }
+
+.arrows:hover {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(85deg) brightness(102%) contrast(102%);
+  } 

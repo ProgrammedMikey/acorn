@@ -16,3 +16,13 @@ mysqli_set_charset($con, 'urf8');
 } catch (Error $e) {
     print "The system is busy try again later";
 }
+
+/* Attempt MySQL server connection. Assuming you are running MySQL
+server with default setting (user 'root' with no password) */
+$link = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+ 
+// Check connection
+if($link === false){
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
+ 
